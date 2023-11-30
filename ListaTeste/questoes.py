@@ -1,0 +1,4 @@
+
+print("Na questão 5, irá ocorrer a saida do numero 2 e depois ocorrerá a saida do 200. \n")
+print("Na questão 2, irá ocorrer a saida do numero (-5), pois [(0)+(1*-1*4)+(0)-(1*1*1)-(0)-(0)]=(-5).\n")
+print("Na qeustão 3 (Indicando a primeira linha igual a 1) contêm alguns erros:\n Na linha 3 -> ausência de ';' no final do comando desta linha.\n Na linha 5 -> está ocorrendo um erro, pois a presença da ',' dentro do 'for', contudo o correto seria a presença de ';'.\n Na linha 5 -> contém um erro dentro do 'for', a variável 'i', não foi declarada fora do escopo e também dentro do escopo, sendo necessário adicionar 'int' antes do nome da variável('i').\n Na linha 8 ou 9 -> é necessário fechar o código 'for' com o uso de '}'.\n Na linha 11 -> é necessário existir algum valor para retornar o programa além de adicionar o ';' no final da linha de comando. \n")
