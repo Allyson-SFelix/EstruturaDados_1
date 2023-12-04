@@ -1,5 +1,13 @@
 #include <stdio.h>
 
+int soma(int n1,int n2);
+int subtrair(int n1,int n2);
+int multiplicacao(int n1,int n2);
+int divisao(int n1,int n2);
+int calcular(int n1,int n2,int (*operacao)(int,int));
+
+
+
 int soma(int n1,int n2){
     return n1+n2;
 }
