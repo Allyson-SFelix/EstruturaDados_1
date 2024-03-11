@@ -1,0 +1,4 @@
+Nome:aaa,Preco:RS1.00
+Nome:qqq,Preco:RS56.00
+Nome:xcxzcc,Preco:RS86.00
+Nome:tgb,Preco:RS56.00

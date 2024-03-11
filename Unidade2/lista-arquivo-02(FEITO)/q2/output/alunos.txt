@@ -1,0 +1,3 @@
+
+Nome:asd	nota 1: 12.00	nota 2: 13.00	nota 3: 14.00
+Nome:ingra	nota 1: 1.00	nota 2: 2.00	nota 3: 3.00

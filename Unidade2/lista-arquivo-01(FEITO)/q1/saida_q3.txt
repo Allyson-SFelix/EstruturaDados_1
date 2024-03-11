@@ -1,0 +1,7 @@
+Alberto	5.166667	reprovado
+Jane	6.433333	reprovado
+Igor	8.833333	aprovado
+Samara	9.000000	aprovado
+Maria Luiza	10.000000	aprovado
+Cesar	9.000000	aprovado
+Pedro Felipe	7.000000	aprovado

@@ -1,0 +1,16 @@
+Tipos abstrados de dados
+
+
+(arquivo da biblioteca.c para ver a implementação da funcao)
+
+
+USO DO MODULO
+
+arquivo com funcoes que representam parte de uma implementação
+
+
+compila o modulo,compila o main e depois (-o main.exec modulo.h main.o)
+
+gcc -c arquivoFuncao.c
+gcc -c main.c
+gcc -o main.exe arquivoFuncao.o main.o
