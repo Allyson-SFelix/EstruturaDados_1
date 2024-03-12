@@ -1,12 +1,4 @@
 #include "disciplina.h"
-typedef struct aluno
-{
-    char nome[100];
-    int matricula;
-    Disciplina*disciplinas[10];
-    int num_disciplinas;
-}aluno;
-
 typedef struct aluno Aluno;
 
 /*Funcao que aloca a estrutura para cadastrar o aluno e seus dados e retorna a estritura preenchida*/
@@ -19,3 +11,11 @@ void matricula_disciplina(Aluno* aluno, Disciplina* disciplina);
 
 /*Funcao que exclui o aluno do sistema*/
 void exclui_aluno(Aluno* aluno);
+
+
+/*Funcao que realiza o print dos alunos cadastrados no sistema*/
+void printAlunos(Aluno**aluno,int max,int *matriculas);
+
+
+/*Funcao que libera memoria da estrutura de alunos */
+void liberarMemoriaAlunos(Aluno**aluno,int max,int *matriculas);
