@@ -9,8 +9,6 @@ struct ingresso{
 };
 
 void preenche(Ingresso* i){
-    
-    // LETRA A
     printf("\nDigite o preco do ingresso: ");
     scanf("%f",&i->preco);
     printf("\nDigite o local da atracao: ");
@@ -29,25 +27,23 @@ void altera_preco(Ingresso* i, float valor){
     i->preco=valor;
 }
 
-void imprime_menor_maior_preco(int n, Ingresso *vet){
-/*Escreva uma função que receba, como parâmetros, um vetor de ingressos e o tamanho do vetor e
-imprima os eventos de ingresso mais barato e mais caro. Protótipo: void imprime_menor_maior_preco(int
-n, Ingresso* vet);*/
-    int i=0;
-    int maiorId=0;
-    int menorId=0;
-    for(i=0;i<n;i++){
-        if(vet[i].preco>vet[maiorId].preco){
-            maiorId=i;
-        }
-        if(vet[i].preco<vet[menorId].preco){
-            menorId=i;
+void imprime_menor_maior_preco(int n, Ingresso **vet) {
+    int maiorId = 0;
+    int menorId = 0;
+
+    for (int i = 0; i < n; i++) {
+        if (vet[i]->preco > vet[maiorId]->preco) {
+            maiorId = i;
+        }else if(vet[i]->preco < vet[menorId]->preco){
+                menorId = i;
         }
     }
-    printf("\nO ingresso mais barato-\nvalor do ingresso: RS%.2f\nlocal:%s\natracao: %s\n",vet[menorId].preco,vet[menorId].local,vet[menorId].atracao);
+
+    printf("\nO ingresso mais barato -\nvalor do ingresso: RS%.2f\nlocal:%s\natracao: %s\n", vet[menorId]->preco, vet[menorId]->local, vet[menorId]->atracao);
     
-    printf("\nO ingresso mais caro -\nvalor do ingresso: RS%.2f\nlocal:%s\natracao: %s\n",vet[maiorId].preco,vet[maiorId].local,vet[maiorId].atracao);
+    printf("\nO ingresso mais caro -\nvalor do ingresso: RS%.2f\nlocal:%s\natracao: %s\n", vet[maiorId]->preco, vet[maiorId]->local, vet[maiorId]->atracao);
 }
+
 
 void liberarMemoria(Ingresso**ingresso,int qtd){
     int i =0;
@@ -67,14 +63,10 @@ Ingresso**receberDadosIniciais(Ingresso**ingresso,int *quantidadeIngressos){
         exit(1);
     }
 
-     // como foi pedido apenas na letra anterior da letra que criou o vetor será [0]
-        //
-   
-    // preparos para funcionar a letra d)
     int i=0;
     for(i=0;i<(*quantidadeIngressos);i++){
         ingresso[i]=(Ingresso *)malloc(sizeof(Ingresso));
-        if(ingresso==NULL){
+        if(ingresso[i]==NULL){
             printf("erro alocacao\n");
             exit(1);
         }
@@ -83,12 +75,7 @@ Ingresso**receberDadosIniciais(Ingresso**ingresso,int *quantidadeIngressos){
         printf("\n Digite o novo valor do ingresso:\n");
         float novoPreco=0.0;
         scanf("%f",&novoPreco);
-        altera_preco(ingresso[0], novoPreco);
+        altera_preco(ingresso[i], novoPreco);
     }
-    for(i=0;i<(*quantidadeIngressos);i++){
-        imprime_menor_maior_preco(*quantidadeIngressos, ingresso[i]);
-    //
-    //  
-        return ingresso;
-    }
+    return ingresso;
 }
